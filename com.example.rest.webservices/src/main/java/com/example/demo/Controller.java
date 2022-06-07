@@ -24,7 +24,7 @@ public class Controller {
 		return ResponseEntity.created(uri).build();
 	}
 
-	@RequestMapping()
+	@RequestMapping(method = RequestMethod.GET)
 	public List<User> getUsers() {
 		return daoService.findAll();
 	}
