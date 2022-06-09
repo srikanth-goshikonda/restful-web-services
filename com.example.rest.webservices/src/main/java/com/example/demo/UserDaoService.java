@@ -13,9 +13,9 @@ public class UserDaoService {
 	private static int userCount =3;
 	
 	static {
-		users.add(new User(1, "Srikanth", new Date()));
-		users.add(new User(2, "Naresh", new Date()));
-		users.add(new User(3, "Suresh", new Date()));
+		users.add(new User(1, "Srikanth","sg@gmail.com" ,new Date()));
+		users.add(new User(2, "Naresh", "ng@gmail.com",new Date()));
+		users.add(new User(3, "Suresh", "sg@gmail.com",new Date()));
 	}
 	
 	public List<User> findAll(){
@@ -36,6 +36,19 @@ public class UserDaoService {
 		for(User user : users) {
 			if(user.getId() == id)
 			{
+				return user;
+			}
+		}
+		return null;
+	}
+
+	public User deleteById(int userId) {
+		// TODO Auto-generated method stub
+		for(User user :users)
+		{
+			if(user.getId() == userId)
+			{
+				users.remove(user);
 				return user;
 			}
 		}
