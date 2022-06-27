@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 public class User {
 
 	private Integer id;
-	@Size(min = 2)
+	@Size(min = 3)
 	private String name;
 	@Email(message = "Email Not Valid")
 	private String email;
